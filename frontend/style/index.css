@@ -36,6 +36,9 @@ body {
     text-align: center;
     align-items: center;
   }
+  .logo > img {
+    width: 50%;
+  }
 }
 #shopby {
   font-size: 2rem;
@@ -61,4 +64,11 @@ body {
 }
 .btn {
   background: linear-gradient(135deg, #cdffd8, #94b9ff);
+}
+.logo > img {
+  width: 30%;
+}
+.navigation {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
