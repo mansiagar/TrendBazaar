@@ -36,8 +36,31 @@ body {
     text-align: center;
     align-items: center;
   }
+  .nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensures the navbar is above other content */
+    background-color: white; /* Optional: To maintain background color */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow for better visibility */
+  }
+  .search {
+    width: 10%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+  }
+
+  .btn {
+    background: linear-gradient(135deg, #cdffd8, #94b9ff);
+  }
   .logo > img {
-    width: 50%;
+    display: none;
+  }
+  .search {
+    display: none;
+  }
+  form {
+    float: right;
   }
 }
 #shopby {
@@ -59,14 +82,12 @@ body {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   margin: 20px;
 }
-.form {
-  float: right;
-}
+
 .btn {
   background: linear-gradient(135deg, #cdffd8, #94b9ff);
 }
 .logo > img {
-  width: 30%;
+  width: 20%;
 }
 .navigation {
   display: grid;
