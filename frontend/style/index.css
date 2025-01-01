@@ -1,0 +1,64 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: linear-gradient(90deg, #cdffd8, #94b9ff);
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.cards {
+  width: 80%;
+  text-align: center;
+  border-top-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+  margin: 10px;
+  font-size: 2rem;
+  overflow: hidden;
+  background: linear-gradient(135deg, #cdffd8, #94b9ff);
+}
+.cards > img {
+  width: 100%;
+  margin-top: 20px;
+  border-top-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+@media (max-width: 750px) and (min-width: 350px) {
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .cards {
+    width: 300px;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    text-align: center;
+    align-items: center;
+  }
+}
+#shopby {
+  font-size: 2rem;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* Ensures the navbar is above other content */
+  background-color: white; /* Optional: To maintain background color */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow for better visibility */
+}
+.search {
+  width: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+}
+.form {
+  float: right;
+}
+.btn {
+  background: linear-gradient(135deg, #cdffd8, #94b9ff);
+}
