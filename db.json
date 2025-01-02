@@ -1,0 +1,54 @@
+{
+  "indianwear": [
+    {
+      "type": "kurties",
+      "description": "Traditional and contemporary kurties for various occasions",
+      "items": [
+        {
+          "id": 1,
+          "name": "Wine Yoke Design Silk Kurta",
+          "price": 799,
+          "size": ["S", "M", "L", "XL"],
+          "color": "Red",
+          "material": "silk",
+          "inStock": true,
+          "image": "https://drive.google.com/file/d/1w4L4SMSTbhcZBIz2oPZFBJcoSTXOPc7j/view?usp=sharing"
+        },
+        {
+          "id": 2,
+          "name": "Multicolored Priented Kurti",
+          "price": 999,
+          "size": ["M", "L", "XL"],
+          "color": "Blue",
+          "material": "crepe",
+          "inStock": true,
+          "image": "https://example.com/images/embroidered-kurti.jpg"
+        }
+      ]
+    },
+    {
+      "type": "sarees",
+      "description": "Elegant sarees for festive and formal wear",
+      "items": [
+        {
+          "id": 1,
+          "name": "Banarasi Silk Saree",
+          "price": 2999,
+          "color": "Golden",
+          "material": "Silk",
+          "inStock": true,
+          "image": "https://example.com/images/banarasi-silk-saree.jpg"
+        },
+        {
+          "id": 2,
+          "name": "Georgette Printed Saree",
+          "price": 1499,
+          "color": "Pink",
+          "material": "Georgette",
+          "inStock": false,
+          "image": "https://example.com/images/georgette-printed-saree.jpg"
+        }
+      ]
+    }
+  ]
+}

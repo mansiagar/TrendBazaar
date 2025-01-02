@@ -8,13 +8,30 @@ body {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 }
+.card-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  text-align: center;
+  margin: 10px;
+}
+.card-content > p {
+  font-size: 1.2rem;
+  font-family: sans-serif;
+}
+.card-content > button {
+  width: 100%;
+  height: 70%;
+  padding: 5px;
+  border: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow for better visibility */
+}
 .cards {
   width: 80%;
   text-align: center;
   border-top-right-radius: 50px;
   border-bottom-left-radius: 50px;
   margin: 10px;
-  font-size: 2rem;
+
   overflow: hidden;
   background: linear-gradient(135deg, #cdffd8, #94b9ff);
 }
@@ -61,6 +78,14 @@ body {
   }
   form {
     float: right;
+  }
+  .card-content > p {
+    font-size: 1rem;
+  }
+  .card-content > button {
+    width: 100%;
+    height: 50%;
+    margin-top: 20px;
   }
 }
 #shopby {
