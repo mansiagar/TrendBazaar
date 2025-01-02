@@ -13,7 +13,7 @@
           "color": "Red",
           "material": "silk",
           "inStock": true,
-          "image": "kurti1"
+          "image": "https://raw.githubusercontent.com/mansiagar/TrendBazaar/main/images/kurti1.jpg"
         },
         {
           "id": 2,
@@ -24,7 +24,7 @@
           "color": "Blue",
           "material": "crepe",
           "inStock": true,
-          "image": "https://raw.githubusercontent.com/mansiagar/TrendBazaar/db72eae2df8921da5d09a9d7a99638cff56564c0/images/kurti2.jpg"
+          "image": "https://raw.githubusercontent.com/mansiagar/TrendBazaar/main/images/kurti2.jpg"
         },
         {
           "id": 3,
@@ -35,7 +35,7 @@
           "color": "green",
           "material": "Silk",
           "inStock": true,
-          "image": "k3"
+          "image": "https://raw.githubusercontent.com/mansiagar/TrendBazaar/main/images/kurti3.jpg"
         },
         {
           "id": 4,
@@ -46,7 +46,7 @@
           "color": "Blue",
           "material": "Silk",
           "inStock": true,
-          "image": "k4"
+          "image": "https://raw.githubusercontent.com/mansiagar/TrendBazaar/main/images/kurti4.jpg"
         }
       ]
     },
@@ -61,7 +61,7 @@
           "color": "Blue",
           "material": "Chiffon",
           "inStock": true,
-          "image": "s1"
+          "image": "https://raw.githubusercontent.com/mansiagar/TrendBazaar/main/images/saree1.jpg"
         },
         {
           "id": 2,
@@ -70,25 +70,25 @@
           "color": "Grey",
           "material": "Chiffon",
           "inStock": false,
-          "image": "s2"
+          "image": "https://raw.githubusercontent.com/mansiagar/TrendBazaar/main/images/saree2.jpg"
         },
         {
           "id": 3,
-          "name": "Pink Printed Ploy Chiffon",
-          "price": 1499,
-          "color": "Pink",
-          "material": "Chiffon",
-          "inStock": true,
-          "image": "s3"
-        },
-        {
-          "id": 2,
           "name": "Black Printed Ploy Chiffon",
           "price": 1499,
           "color": "Black",
           "material": "Chiffon",
+          "inStock": true,
+          "image": "https://raw.githubusercontent.com/mansiagar/TrendBazaar/main/images/saree3.jpg"
+        },
+        {
+          "id": 2,
+          "name": "Pink Printed Ploy Chiffon",
+          "price": 1499,
+          "color": "Pink",
+          "material": "Chiffon",
           "inStock": false,
-          "image": "s4"
+          "image": "https://raw.githubusercontent.com/mansiagar/TrendBazaar/main/images/saree4.jpg"
         }
       ]
     }
