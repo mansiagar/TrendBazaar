@@ -1,7 +1,18 @@
 window.onload = async function () {
   try {
     let arr = await getdata();
-    displaydata(arr);
+    let typeToDisplay = "sarees";
+
+    let data;
+    if (typeToDisplay === "kurties") {
+      data = arr.find((item) => item.type == "kurties").items;
+    } else if (typeToDisplay === "sarees") {
+      data = arr.find((item) => item.type == "sarees").items;
+    } else {
+      console.error("Invalid type specified");
+      return;
+    }
+    displaydata(data);
   } catch (err) {
     console.log(err);
   }
@@ -24,9 +35,14 @@ let displaydata = (arr) => {
   arr.map((el, i) => {
     let product = document.createElement("div");
     let title = document.createElement("h3");
-    title.textContent = `${el.type}`;
+    title.textContent = `${el.name}`;
 
-    product.append(title);
+    let kurtieImg = document.createElement("img");
+    kurtieImg.src = `${el.image}`;
+    kurtieImg.alt = `${el.name}`;
+    kurtieImg.style.width = "200px";
+
+    product.append(title, kurtieImg);
     productDiv.append(product);
   });
 };
