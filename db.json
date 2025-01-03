@@ -1,5 +1,5 @@
 {
-  "user": [
+  "users": [
     {
       "username": "mansi ",
       "email": "mansi123@gmail.com",
@@ -17,12 +17,7 @@
           "id": 1,
           "name": "A-line Kurta Sets",
           "price": 799,
-          "size": [
-            "S",
-            "M",
-            "L",
-            "XL"
-          ],
+          "size": ["S", "M", "L", "XL"],
           "color": "Red",
           "material": "silk",
           "inStock": true,
@@ -32,11 +27,7 @@
           "id": 2,
           "name": "Multicolored Priented Kurti",
           "price": 999,
-          "size": [
-            "M",
-            "L",
-            "XL"
-          ],
+          "size": ["M", "L", "XL"],
           "color": "blue",
           "material": "crepe",
           "inStock": true,
@@ -46,11 +37,7 @@
           "id": 3,
           "name": "Teal Yoke Design  Kurta",
           "price": 699,
-          "size": [
-            "M",
-            "L",
-            "XL"
-          ],
+          "size": ["M", "L", "XL"],
           "color": "green",
           "material": "silk",
           "inStock": true,
@@ -60,11 +47,7 @@
           "id": 4,
           "name": "Green Yoke Design  Kurta",
           "price": 599,
-          "size": [
-            "M",
-            "L",
-            "XL"
-          ],
+          "size": ["M", "L", "XL"],
           "color": "green",
           "material": "silk",
           "inStock": true,

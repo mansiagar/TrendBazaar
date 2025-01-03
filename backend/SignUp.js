@@ -9,7 +9,7 @@ form.addEventListener("submit", function (event) {
   let Mobile = form.Mobile.value;
   let userObj = { username, email, password, Mobile };
 
-  fetch(`${baseUrl}/user`, {
+  fetch(`${baseUrl}/users`, {
     method: "POST",
     headers: {
       "content-type": "application/json",
