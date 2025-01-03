@@ -3,11 +3,83 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Product Categories</title>
+    <link href="./style/hompage.css" rel="stylesheet" />
+    <title>Women Wear</title>
   </head>
   <body>
-    <h1>Product Categories</h1>
+    <nav class="nav">
+        <div class="navigation">
+          <div class="logo">
+            <img src="/images/logo.png" alt="Trand Bazaar" class="LOGO" />
+              <div class="collection">
+              <select class="btn" id="select">
+                <option>Collection</option>
+                <option value="kurties">Kurties</option>
+                <option value="sarees">Sarees</option>
+              </select>
+            </div>
+            
+          </div>        
+          <div>
+            <form class="form" id="form">
+              <a href="/index.html">Home</a>
+              <a href="/">Wishlist</a>
+              <input
+                class="search"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button id="button" class="btn btn-outline-primary" type="submit">
+                Login/SignUp
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <section>
+      <div id="second_nav">
+        <!-- filter -->
+        <div id="filter">
+          <select class="btn" id="color">
+            <option value="">Color</option>
+            <option value="grey">Grey</option>
+            <option value="blue">Blue</option>
+            <option value="Black">Black</option>
+            <option value="Pink">Pink</option>
+            <option value="Red">Red</option>
+            <option value="green">Green</option>
+          </select>
+          <select class="btn" id="Fabric">
+            <option value="">Fabric</option>
+            <option value="silk">Silk</option>
+            <option value="crepe">Crepe</option>
+            <option value="Chiffon">Chiffon</option>
+          </select>
+        </div> 
+        <!-- sorting -->
+        <div id="sort">
+          <div id="sortPrice">
+          <select class="btn" id="Price">
+             <option value="">Sort By Price</option>
+             <option value="htl">High To Low</option>
+             <option value="lth">Low To High</option>
+       </select>
+        </div>
+        <div id="sortalpha">
+          <select class="btn" id="Alpha">
+             <option value="">Sort By Alphabet</option>
+             <option value="htl">A to Z</option>
+             <option value="lth">Z to A</option>
+       </select>
+        </div>
+        </div>
+      </div>
+    </section>
+
     <div id="products"></div>
+
     <script src="/backend/homepage.js" type="module"></script>
   </body>
 </html>

@@ -1,0 +1,188 @@
+#products {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+  text-align: center;
+  margin-top: 50px;
+  margin-left: 50px;
+}
+#products > div {
+  position: relative;
+  width: 250px;
+  text-align: center;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  height: 400px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+@media (max-width: 750px) {
+  #products {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensures the navbar is above other content */
+    background-color: white; /* Optional: To maintain background color */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow for better visibility */
+  }
+  .search {
+    width: 10%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+  }
+
+  .btn {
+    background: linear-gradient(90deg, #5de0e6, #0078a6, #08749d);
+  }
+  .btn:hover {
+    background: #0cc0df;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 15px;
+  }
+  .logo > img {
+    display: none;
+  }
+  .search {
+    display: none;
+  }
+  form {
+    float: right;
+  }
+  #second_nav {
+    flex-direction: column;
+    align-items: stretch;
+
+    width: auto;
+  }
+  #filter,
+  #sort {
+    flex-direction: row;
+    align-items: stretch;
+    gap: 10px;
+  }
+  #filter select,
+  #sort select {
+    width: 100%;
+  }
+}
+
+/* mobile screen */
+@media (max-width: 460px) {
+  #products {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+  }
+}
+#products > div > button {
+  position: absolute; /* Fix the button to the bottom */
+  bottom: 10px; /* Space from the bottom */
+
+  transform: translateX(-50%); /* Adjust for centering */
+
+  width: auto; /* Allow flexibility */
+  font-size: 1.2rem;
+  color: #fff;
+  background: linear-gradient(90deg, #5de0e6, #0078a6, #08749d);
+  border: none;
+  width: 100%;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#products > div > button:hover {
+  background: #0cc0df;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 15px;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* Ensures the navbar is above other content */
+  background-color: white; /* Optional: To maintain background color */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow for better visibility */
+}
+.search {
+  width: 30%;
+}
+
+.btn {
+  border: none;
+  color: white;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 2rem;
+  padding: 5px;
+  background: linear-gradient(90deg, #5de0e6, #0078a6, #08749d);
+}
+.btn:hover {
+  background: #0cc0df;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 15px;
+}
+.logo > img {
+  width: 20%;
+}
+.logo {
+  display: flex;
+  flex-direction: row;
+}
+.collection {
+  margin-top: 10px;
+  width: 20%;
+}
+.navigation {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.form {
+  float: right;
+  justify-content: space-between;
+}
+.form > a {
+  color: #0078a6;
+  font-size: 1rem;
+  padding: 10px;
+  text-decoration: none;
+}
+.form > .search {
+  margin-left: 10px;
+}
+#button {
+  margin-left: 10px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+#second_nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px;
+
+  margin-top: 60px;
+  width: 100%;
+}
+#filter,
+#sort {
+  display: flex;
+  gap: 10px;
+}
+
+#filter select,
+#sort select {
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}

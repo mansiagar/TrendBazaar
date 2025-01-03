@@ -68,7 +68,16 @@ body {
   }
 
   .btn {
-    background: linear-gradient(135deg, #cdffd8, #94b9ff);
+    border: none;
+    color: white;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: 2rem;
+    padding: 5px;
+    background: linear-gradient(90deg, #5de0e6, #0078a6, #08749d);
+  }
+  .btn:hover {
+    background: #0cc0df;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 15px;
   }
   .logo > img {
     display: none;
@@ -76,9 +85,7 @@ body {
   .search {
     display: none;
   }
-  form {
-    float: right;
-  }
+
   .card-content > p {
     font-size: 1rem;
   }
@@ -104,12 +111,19 @@ body {
 }
 .search {
   width: 50%;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  margin: 20px;
 }
 
 .btn {
-  background: linear-gradient(135deg, #cdffd8, #94b9ff);
+  border: none;
+  color: white;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 2rem;
+  padding: 5px;
+  background: linear-gradient(90deg, #5de0e6, #0078a6, #08749d);
+}
+.btn:hover {
+  background: #0cc0df;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 15px;
 }
 .logo > img {
   width: 20%;
@@ -117,4 +131,14 @@ body {
 .navigation {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+}
+form {
+  margin-top: 10px;
+  float: right;
+}
+.form > .search {
+  margin-left: 10px;
+}
+#button {
+  margin-left: 10px;
 }
