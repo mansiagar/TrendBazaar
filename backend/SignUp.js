@@ -18,7 +18,7 @@ form.addEventListener("submit", function (event) {
   })
     .then(() => {
       alert("successfully user added");
-      window.location.href = "/index.html";
+      window.location.href = "/TrendBazaar/frontend/login.html";
     })
     .catch((err) => {
       alert("something went wrong");
