@@ -26,14 +26,13 @@ body {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow for better visibility */
 }
 .cards {
-  width: 80%;
+  width: 100%;
   text-align: center;
   border-top-right-radius: 50px;
   border-bottom-left-radius: 50px;
   margin: 10px;
 
   overflow: hidden;
-  background: linear-gradient(135deg, #cdffd8, #94b9ff);
 }
 .cards > img {
   width: 100%;
