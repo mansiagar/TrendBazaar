@@ -16,6 +16,7 @@ form.addEventListener("submit", function (event) {
         if (user[0].password == password) {
           alert("successfully login");
           window.location.href = "/TrendBazaar/frontend/homepage.html";
+          // window.location.href = "/frontend/homepage.html";
         }
       } else {
         alert("user not present");

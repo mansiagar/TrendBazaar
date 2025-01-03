@@ -3,9 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SignUp</title>
-    <!-- <link href="/frontend/style/signup.css" rel="stylesheet" /> -->
-    <link href="/TrendBazaar/frontend/style/signup.css" rel="stylesheet" />
+    <title>Login</title>
+    <!-- Dynamic stylesheet path -->
+    <script>
+      const isGitEnvironment = window.location.pathname.includes("TrendBazaar");
+      const basePath = isGitEnvironment ? "/TrendBazaar" : "";
+      document.write(
+        `<link href="${basePath}/frontend/style/signup.css" rel="stylesheet" />`
+      );
+    </script>
+    <!-- Dynamic stylesheet path end -->
   </head>
   <body>
     <!-- navbar -->
@@ -25,9 +32,16 @@
         </p>
       </form>
     </div>
+    <!-- Dynamically load scripts -->
+    <script>
+      const scriptBasePath = isGitEnvironment ? "/TrendBazaar" : "";
+      document.write(
+        `<script src="${scriptBasePath}/backend/baseUrl.js" type="module"><\/script>`
+      );
+      document.write(
+        `<script src="${scriptBasePath}/backend/login.js" type="module"><\/script>`
+      );
+    </script>
+    <!-- Dynamically load scripts end -->
   </body>
-  <!-- <script src="/backend/login.js" type="module"></script>
-  <script src="/backend/baseUrl.js" type="module"></script> -->
-  <script src="/TrendBazaar/backend/baseUrl.js" type="module"></script>
-  <script src="/TrendBazaar/backend/login.js" type="module"></script>
 </html>
