@@ -4,7 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- <link href="./style/hompage.css" rel="stylesheet" /> -->
-   <link href="./style/hompage.css" rel="stylesheet" />
+   <!-- <link href="/frontend/style/hompage.css" rel="stylesheet" /> -->
+    <!-- Dynamic stylesheet path -->
+    <script>
+      const isGitEnvironment = window.location.pathname.includes("TrendBazaar");
+      const basePath = isGitEnvironment ? "/TrendBazaar" : "";
+      document.write(
+        `<link href="${basePath}/frontend/style/hompage.css"  rel="stylesheet" />`
+      );
+    </script>
+     <!-- Dynamic stylesheet path end -->
 
     <title>Women Wear</title>
   </head>
@@ -82,6 +91,18 @@
 
     <div id="products"></div>
 
-    <script src="/TrendBazaar/backend/homepage.js" type="module"></script>
+    <!-- <script src="/TrendBazaar/backend/homepage.js" type="module"></script> -->
+    <!-- Dynamically load scripts -->
+    <script>
+      const scriptBasePath = isGitEnvironment ? "/TrendBazaar" : "";
+      document.write(
+        `<script src="${scriptBasePath}/backend/baseUrl.js" type="module"><\/script>`
+      );
+      document.write(
+        `<script src="${scriptBasePath}/backend/homepage.js" type="module"><\/script>`
+      );
+    </script>
+     <!-- Dynamically load scripts end -->
+ 
   </body>
 </html>
