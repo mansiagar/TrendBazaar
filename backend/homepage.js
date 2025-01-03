@@ -99,7 +99,7 @@ window.onload = async function () {
 // get data function
 async function getdata() {
   try {
-    let res = await fetch("http://localhost:3000/indianwear");
+    let res = await fetch(`${baseUrl}/indianwear`);
     let dataoj = res.json();
     // console.log(dataoj);
     return dataoj;
