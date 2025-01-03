@@ -99,7 +99,9 @@ window.onload = async function () {
 // get data function
 async function getdata() {
   try {
-    let res = await fetch(`${baseUrl}/indianwear`);
+    let res = await fetch(
+      "https://fluorescent-prism-flavor.glitch.me/indianwear"
+    );
     let dataoj = res.json();
     // console.log(dataoj);
     return dataoj;
