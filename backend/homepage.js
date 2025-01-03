@@ -48,7 +48,49 @@ window.onload = async function () {
       displaydata(filteredData);
     });
 
-    //
+    // Event listener for sorting by price
+    let sortPrice = document.getElementById("Price");
+    sortPrice.addEventListener("change", function () {
+      let sortOrder = sortPrice.value;
+
+      let sortedData = [...data]; // Clone the array to avoid mutating original
+      if (sortOrder === "htl") {
+        // Sort High to Low
+        sortedData.sort((a, b) => b.price - a.price);
+      } else if (sortOrder === "lth") {
+        // Sort Low to High
+        sortedData.sort((a, b) => a.price - b.price);
+      }
+      displaydata(sortedData);
+    });
+
+    // Event Listener for sorting by alpha
+    let sortalpha = document.getElementById("Alpha");
+    sortalpha.addEventListener("change", function () {
+      let sortalphaOrder = sortalpha.value;
+
+      let sortedData = [...data];
+      // sort a to z
+      if (sortalphaOrder == "atoz") {
+        sortedData.sort((a, b) => {
+          if (a.name > b.name) {
+            return 1;
+          } else {
+            return -1;
+          }
+        });
+        displaydata(sortedData);
+      } else {
+        sortedData.sort((a, b) => {
+          if (a.name > b.name) {
+            return -1;
+          } else {
+            return 1;
+          }
+        });
+        displaydata(sortedData);
+      }
+    });
   } catch (err) {
     console.log(err);
   }
