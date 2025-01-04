@@ -14,3 +14,8 @@ indianbutton.addEventListener("click", function (event) {
 
   // window.location.href = "/frontend/homepage.html";
 });
+let logo = document.getElementById("logo");
+logo.addEventListener("click", function () {
+  window.location.href = "/TrendBazaar/frontend/admin.html";
+  // window.location.href = "/frontend/admin.html";
+});

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Panel</title>
+    <script>
+      const isGitEnvironment = window.location.pathname.includes("TrendBazaar");
+      const basePath = isGitEnvironment ? "/TrendBazaar" : "";
+      document.write(
+        `<link href="${basePath}/frontend/style/signup.css" rel="stylesheet" />`
+      );
+
+      // Initialize productData structure
+    </script>
+  </head>
+  <body>
+    <h1>Add New Product</h1>
+    <div id="signform">
+      <form id="productForm">
+        <select id="category" name="category" required>
+          <option value="" disabled selected>Select Category</option>
+          <option value="indianwear">Indian Wear</option>
+          <!-- <option value="westernwear">Western Wear</option> -->
+        </select>
+
+        <select id="indianwear">
+          <option value="">Type</option>
+          <option value="kurties">Kurties</option>
+          <option value="sarees">Sarees</option>
+        </select>
+
+        <!-- <select id="westernwear">
+          <option value="">Type</option>
+          <option value="jeans">Jeans</option>
+          <option value="tops">Tops</option>
+        </select> -->
+
+        <input type="text" id="name" name="name" required placeholder="Name" />
+        <input
+          type="number"
+          id="price"
+          name="price"
+          required
+          placeholder="Price"
+        />
+        <input
+          type="text"
+          id="size"
+          name="size"
+          placeholder="Size (comma-separated):"
+        />
+        <input type="text" id="color" name="color" placeholder="Color" />
+        <input
+          type="text"
+          id="material"
+          name="material"
+          placeholder="Material:"
+        />
+        <select id="inStock" name="inStock">
+          <option value="">In Stock</option>
+          <option value="true">Yes</option>
+          <option value="false">No</option>
+        </select>
+        <input
+          type="url"
+          id="image"
+          name="image"
+          required
+          placeholder="Image URL"
+        />
+        <button type="submit" id="submit">Submit</button>
+      </form>
+    </div>
+    <script></script>
+    <!-- Dynamically load scripts -->
+    <script>
+      const scriptBasePath = isGitEnvironment ? "/TrendBazaar" : "";
+      document.write(
+        `<script src="${scriptBasePath}/backend/baseUrl.js" type="module"><\/script>`
+      );
+      document.write(
+        `<script src="${scriptBasePath}/backend/admin.js" type="module"><\/script>`
+      );
+    </script>
+    <!-- Dynamically load scripts end -->
+  </body>
+</html>

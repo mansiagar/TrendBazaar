@@ -1,0 +1,110 @@
+{
+  "users": [
+    {
+      "username": "mansi ",
+      "email": "mansi123@gmail.com",
+      "password": "123456",
+      "Mobile": "07389835904",
+      "id": 1
+    }
+  ],
+  "indianwear": [
+    {
+      "type": "kurties",
+      "description": "Traditional and contemporary kurties for various occasions",
+      "items": [
+        {
+          "id": 1,
+          "name": "A-line Kurta Sets",
+          "price": 799,
+          "size": ["S", "M", "L", "XL"],
+          "color": "Red",
+          "material": "silk",
+          "inStock": true,
+          "image": "https://raw.githubusercontent.com/mansiagar/TrendBazaar/main/images/kurti1.jpg"
+        },
+        {
+          "id": 2,
+          "name": "Multicolored Priented Kurti",
+          "price": 999,
+          "size": ["M", "L", "XL"],
+          "color": "blue",
+          "material": "crepe",
+          "inStock": true,
+          "image": "https://raw.githubusercontent.com/mansiagar/TrendBazaar/main/images/kurti2.jpg"
+        },
+        {
+          "id": 3,
+          "name": "Teal Yoke Design  Kurta",
+          "price": 699,
+          "size": ["M", "L", "XL"],
+          "color": "green",
+          "material": "silk",
+          "inStock": true,
+          "image": "https://raw.githubusercontent.com/mansiagar/TrendBazaar/main/images/kurti3.jpg"
+        },
+        {
+          "id": 4,
+          "name": "Green Yoke Design  Kurta",
+          "price": 599,
+          "size": ["M", "L", "XL"],
+          "color": "green",
+          "material": "silk",
+          "inStock": true,
+          "image": "https://raw.githubusercontent.com/mansiagar/TrendBazaar/main/images/kurti4.jpg"
+        }
+      ]
+    },
+    {
+      "type": "sarees",
+      "description": "Elegant sarees for festive and formal wear",
+      "items": [
+        {
+          "id": 1,
+          "name": "Blue Printed Ploy Chiffon",
+          "price": 2999,
+          "color": "blue",
+          "material": "Chiffon",
+          "inStock": true,
+          "image": "https://raw.githubusercontent.com/mansiagar/TrendBazaar/main/images/saree1.jpg"
+        },
+        {
+          "id": 2,
+          "name": "Grey Printed Ploy Chiffon",
+          "price": 1499,
+          "color": "grey",
+          "material": "Chiffon",
+          "inStock": false,
+          "image": "https://raw.githubusercontent.com/mansiagar/TrendBazaar/main/images/saree2.jpg"
+        },
+        {
+          "id": 3,
+          "name": "Black Printed Ploy Chiffon",
+          "price": 1499,
+          "color": "Black",
+          "material": "Chiffon",
+          "inStock": true,
+          "image": "https://raw.githubusercontent.com/mansiagar/TrendBazaar/main/images/saree3.jpg"
+        },
+        {
+          "id": 4,
+          "name": "Pink Printed Ploy Chiffon",
+          "price": 1499,
+          "color": "Pink",
+          "material": "Chiffon",
+          "inStock": false,
+          "image": "https://raw.githubusercontent.com/mansiagar/TrendBazaar/main/images/saree4.jpg"
+        }
+      ]
+    }
+  ]
+}
+// const updateUrl = `${apiUrl}?type=${typeObject.type}`;
+ const apiUrl = `http://localhost:3000/indianwear`;
+          const response = await fetch(apiUrl);
+          const indianwear = await response.json();
+
+          // Step 2: Find the specific type object (e.g., kurties or sarees)
+          const typeObject = indianwear.find((item) => item.type === type);
+
+          console.log(typeObject.type);
