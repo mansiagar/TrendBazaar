@@ -18,8 +18,8 @@ form.addEventListener("submit", function (event) {
   })
     .then(() => {
       alert("successfully user added");
-      window.location.href = "/TrendBazaar/frontend/login.html";
-      // window.location.href = "/frontend/login.html";
+      // window.location.href = "/TrendBazaar/frontend/login.html";
+      window.location.href = "./login.html";
     })
     .catch((err) => {
       alert("something went wrong");

@@ -147,7 +147,19 @@ let displaydata = (arr) => {
     wishlist.textContent = "Add to WishList";
     wishlist.addEventListener("click", function () {
       console.log(" wishlist function clicked", el);
-      addProductWishlist(el);
+
+      fetch(`${baseUrl}/users`)
+        .then((res) => res.json())
+        .then((data) => {
+          if (data.length != 0) {
+            addProductWishlist(el);
+          } else {
+            alert("user not present");
+          }
+        })
+        .catch((err) => {
+          console.log(err);
+        });
     });
 
     let cart = document.createElement("button");
@@ -155,7 +167,18 @@ let displaydata = (arr) => {
     cart.textContent = "Add to Cart";
     cart.addEventListener("click", function () {
       console.log("clicked", el);
-      addToCart(el);
+      fetch(`${baseUrl}/users`)
+        .then((res) => res.json())
+        .then((data) => {
+          if (data.length != 0) {
+            addToCart(el);
+          } else {
+            alert("user not present");
+          }
+        })
+        .catch((err) => {
+          console.log(err);
+        });
     });
 
     wishCartdiv.append(wishlist, cart);
@@ -189,8 +212,8 @@ let addProductWishlist = async (product) => {
       if (addResponse.ok) {
         alert("Product successfully added to Wishlist");
         confirm("Are you sure you want to add this item to the wishlist?");
-        window.location.href = "/TrendBazaar/frontend/wishlist.html";
-        // window.location.href = "/frontend/wishlist.html";
+        // window.location.href = "/TrendBazaar/frontend/wishlist.html";
+        window.location.href = "./wishlist.html";
       } else {
         alert("Failed to add product to Wishlist. Please try again.");
       }
@@ -235,3 +258,12 @@ let addToCart = async (product) => {
     alert("Something went wrong. Please try again later.");
   }
 };
+
+let form = document.getElementById("form");
+form.addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  //window.location.href = "/TrendBazaar/frontend/SignUp.html";
+
+  window.location.href = "./SignUp.html";
+});

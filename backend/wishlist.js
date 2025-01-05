@@ -137,7 +137,15 @@ let displaydata = (arr) => {
       addToCart(el);
     });
 
-    wishCartdiv.append(cart);
+    let RemoveItem = document.createElement("button");
+    RemoveItem.setAttribute("id", "wishlist");
+    RemoveItem.textContent = "Delete ";
+    RemoveItem.addEventListener("click", function () {
+      console.log(" delete item", el);
+      removeProductWishlist(el);
+    });
+
+    wishCartdiv.append(cart, RemoveItem);
     product.append(kurtieImg, title, price_stock, wishCartdiv);
     productDiv.append(product);
   });
@@ -189,3 +197,81 @@ async function getdata() {
     console.log(err);
   }
 }
+
+const logout = document.getElementById("Logout");
+
+if (!logout) {
+  console.error("Logout button not found in the DOM");
+} else {
+  logout.addEventListener("click", function () {
+    // Get the user's ID from localStorage
+    const userId = localStorage.getItem("userid");
+
+    if (!userId) {
+      alert("No user is logged in");
+      return;
+    }
+
+    // Send a DELETE request to remove the user by their ID
+    fetch(`${baseUrl}/users/${userId}`, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((response) => {
+        if (response.ok) {
+          alert("Successfully logged out and user deleted");
+
+          // Clear localStorage and redirect to the homepage
+          localStorage.removeItem("userid");
+          window.location.href = "./homepage.html";
+        } else {
+          alert("Failed to log out. Please try again.");
+        }
+      })
+      .catch((err) => {
+        console.error("Error during logout:", err);
+        alert("An error occurred. Please check the console for details.");
+      });
+  });
+}
+
+//remove cart
+let removeProductWishlist = async (product) => {
+  try {
+    // Fetch the current wishlist from the server
+    let response = await fetch(`${baseUrl}/wishlist`);
+    let wishlist = await response.json();
+    console.log("wishlist", wishlist);
+
+    // Check if the product is already in the wishlist
+    let isProductInWishlist = wishlist.some(
+      (item) => item.name === product.name
+    );
+
+    if (isProductInWishlist) {
+      // Add the product to the server-side wishlist
+      let deleteResponse = await fetch(`${baseUrl}/wishlist/${product.id}`, {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+      if (deleteResponse.ok) {
+        alert("Product successfully Delete to Wishlist");
+        confirm("Are you sure you want to delete this item to the wishlist?");
+        // window.location.href = "/TrendBazaar/frontend/wishlist.html";
+        window.location.href = "./homepage.html";
+      } else {
+        alert("Failed to delete product to Wishlist. Please try again.");
+      }
+    } else {
+      alert("This product is already in your wishlist.");
+    }
+  } catch (error) {
+    console.error("Error delete product from wishlist:", error);
+    alert("Something went wrong. Please try again later.");
+  }
+};

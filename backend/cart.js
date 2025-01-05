@@ -133,7 +133,15 @@ let displaydata = (arr) => {
     cart.setAttribute("id", "cart");
     cart.textContent = "Buy Now";
 
-    wishCartdiv.append(cart);
+    let RemoveItem = document.createElement("button");
+    RemoveItem.setAttribute("id", "wishlist");
+    RemoveItem.textContent = "Delete ";
+    RemoveItem.addEventListener("click", function () {
+      console.log(" delete item", el);
+      removeProductWishlist(el);
+    });
+
+    wishCartdiv.append(cart, RemoveItem);
     product.append(kurtieImg, title, price_stock, wishCartdiv);
     productDiv.append(product);
   });
@@ -151,3 +159,41 @@ async function getdata() {
     console.log(err);
   }
 }
+//remove cart
+let removeProductWishlist = async (product) => {
+  try {
+    // Fetch the current wishlist from the server
+    let response = await fetch(`${baseUrl}/wishlist`);
+    let wishlist = await response.json();
+    console.log("wishlist", wishlist);
+
+    // Check if the product is already in the wishlist
+    let isProductInWishlist = wishlist.some(
+      (item) => item.name === product.name
+    );
+
+    if (isProductInWishlist) {
+      // Add the product to the server-side wishlist
+      let deleteResponse = await fetch(`${baseUrl}/wishlist/${product.id}`, {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+      if (deleteResponse.ok) {
+        alert("Product successfully Delete to Wishlist");
+        confirm("Are you sure you want to delete this item to the wishlist?");
+        // window.location.href = "/TrendBazaar/frontend/wishlist.html";
+        window.location.href = "./homepage.html";
+      } else {
+        alert("Failed to delete product to Wishlist. Please try again.");
+      }
+    } else {
+      alert("This product is already in your wishlist.");
+    }
+  } catch (error) {
+    console.error("Error delete product from wishlist:", error);
+    alert("Something went wrong. Please try again later.");
+  }
+};
