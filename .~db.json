@@ -1,0 +1,140 @@
+{
+  "indianwear": [
+    {
+      "type": "kurties",
+      "id": 1736004897988,
+      "name": "A-line Kurta Sets",
+      "price": 799,
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "color": "Red",
+      "material": "silk",
+      "inStock": true,
+      "image": "https://raw.githubusercontent.com/mansiagar/TrendBazaar/main/images/kurti1.jpg"
+    },
+    {
+      "type": "kurties",
+      "id": 1736005002102,
+      "name": "Multicolored Priented Kurti",
+      "price": 999,
+      "size": [
+        "M",
+        "L",
+        "XL"
+      ],
+      "color": "blue",
+      "material": "crepe",
+      "inStock": true,
+      "image": "https://raw.githubusercontent.com/mansiagar/TrendBazaar/main/images/kurti2.jpg"
+    },
+    {
+      "type": "sarees",
+      "id": 1736048742996,
+      "name": "Blue Printed Ploy Chiffon ",
+      "price": 2999,
+      "size": [
+        ""
+      ],
+      "color": "blue",
+      "material": "Chiffon",
+      "inStock": true,
+      "image": "https://raw.githubusercontent.com/mansiagar/TrendBazaar/main/images/saree1.jpg"
+    },
+    {
+      "type": "sarees",
+      "id": 1736048798018,
+      "name": "Grey Printed Ploy Chiffon ",
+      "price": 1499,
+      "size": [
+        ""
+      ],
+      "color": "grey",
+      "material": "Chiffon",
+      "inStock": false,
+      "image": "https://raw.githubusercontent.com/mansiagar/TrendBazaar/main/images/saree2.jpg"
+    }
+  ],
+  "wishlist": [
+    {
+      "type": "kurties",
+      "id": 1736004897988,
+      "name": "A-line Kurta Sets",
+      "price": 799,
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "color": "Red",
+      "material": "silk",
+      "inStock": true,
+      "image": "https://raw.githubusercontent.com/mansiagar/TrendBazaar/main/images/kurti1.jpg"
+    },
+    {
+      "type": "sarees",
+      "id": 1736048742996,
+      "name": "Blue Printed Ploy Chiffon ",
+      "price": 2999,
+      "size": [
+        ""
+      ],
+      "color": "blue",
+      "material": "Chiffon",
+      "inStock": true,
+      "image": "https://raw.githubusercontent.com/mansiagar/TrendBazaar/main/images/saree1.jpg"
+    },
+    {
+      "type": "kurties",
+      "id": 1736005002102,
+      "name": "Multicolored Priented Kurti",
+      "price": 999,
+      "size": [
+        "M",
+        "L",
+        "XL"
+      ],
+      "color": "blue",
+      "material": "crepe",
+      "inStock": true,
+      "image": "https://raw.githubusercontent.com/mansiagar/TrendBazaar/main/images/kurti2.jpg"
+    }
+  ],
+  "cart": [
+    {
+      "type": "kurties",
+      "id": 1736004897988,
+      "name": "A-line Kurta Sets",
+      "price": 799,
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "color": "Red",
+      "material": "silk",
+      "inStock": true,
+      "image": "https://raw.githubusercontent.com/mansiagar/TrendBazaar/main/images/kurti1.jpg"
+    },
+    {
+      "type": "kurties",
+      "id": 1736005002102,
+      "name": "Multicolored Priented Kurti",
+      "price": 999,
+      "size": [
+        "M",
+        "L",
+        "XL"
+      ],
+      "color": "blue",
+      "material": "crepe",
+      "inStock": true,
+      "image": "https://raw.githubusercontent.com/mansiagar/TrendBazaar/main/images/kurti2.jpg"
+    }
+  ]
+}

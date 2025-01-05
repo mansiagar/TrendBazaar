@@ -16,6 +16,7 @@
   </head>
   <body>
     <h1>Add New Product</h1>
+    <a href="/index.html">Home</a>
     <div id="signform">
       <form id="productForm">
         <select id="category" name="category" required>
@@ -72,7 +73,23 @@
         <button type="submit" id="submit">Submit</button>
       </form>
     </div>
-    <script></script>
+    <script>
+      // Event listener for type selection
+      document
+        .getElementById("indianwear")
+        .addEventListener("change", (event) => {
+          const selectedType = event.target.value;
+          const sizeInput = document.getElementById("size");
+
+          // Disable or enable size input based on the selected type
+          if (selectedType === "sarees") {
+            sizeInput.disabled = true;
+            sizeInput.value = ""; // Clear the value when disabled
+          } else {
+            sizeInput.disabled = false;
+          }
+        });
+    </script>
     <!-- Dynamically load scripts -->
     <script>
       const scriptBasePath = isGitEnvironment ? "/TrendBazaar" : "";

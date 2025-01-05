@@ -83,19 +83,22 @@ body {
     gap: 20px;
   }
 }
-#products > div > button {
-  position: absolute; /* Fix the button to the bottom */
-  bottom: 10px; /* Space from the bottom */
-
-  transform: translateX(-50%); /* Adjust for centering */
+.wishCartdiv {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin: 10px;
+}
+#wishlist,
+#cart {
+  margin-bottom: 30px; /* Space from the bottom */
 
   width: auto; /* Allow flexibility */
   font-size: 1.2rem;
   color: #fff;
   background: linear-gradient(90deg, #5de0e6, #0078a6, #08749d);
   border: none;
-  width: 100%;
-  padding: 10px;
+
   cursor: pointer;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }

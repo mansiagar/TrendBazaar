@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wishlist</title>
     <!-- Dynamic stylesheet path -->
     <script>
       const isGitEnvironment = window.location.pathname.includes("TrendBazaar");
@@ -11,11 +12,11 @@
         `<link href="${basePath}/frontend/style/hompage.css"  rel="stylesheet" />`
       );
     </script>
-     <!-- Dynamic stylesheet path end -->
-
-    <title>Women Wear</title>
+    <!-- Dynamic stylesheet path end -->
   </head>
   <body>
+    
+    <!-- Dynamically load scripts -->
     <nav class="nav">
         <div class="navigation">
           <div class="logo">
@@ -33,11 +34,9 @@
             <form class="form" id="form">
               
               <a href="/index.html">Home</a>
-               <!-- <a href="/TrendBazaar/">Home</a> -->
-              <a href="./wishlist.html">Wishlist</a>
+              
               <a href="/TrendBazaar/frontend/cart.html">Cart</a>
-              <!-- <a href="/frontend/wishlist.html">Wishlist</a>
-              <a href="/frontend/cart.html">Cart</a> -->
+              <!-- <a href="/frontend/cart.html">Cart</a> -->
               <input
                 class="search"
                 type="search"
@@ -91,21 +90,17 @@
         </div>
       </div>
     </section>
-
     <div id="products"></div>
-
-   
-    <!-- Dynamically load scripts -->
     <script>
       const scriptBasePath = isGitEnvironment ? "/TrendBazaar" : "";
       document.write(
         `<script src="${scriptBasePath}/backend/baseUrl.js" type="module"><\/script>`
       );
       document.write(
-        `<script src="${scriptBasePath}/backend/homepage.js" type="module"><\/script>`
+        `<script src="${scriptBasePath}/backend/wishlist.js" type="module"><\/script>`
       );
     </script>
-     <!-- Dynamically load scripts end -->
- 
+    <!-- Dynamically load scripts end -->
   </body>
+  <script></script>
 </html>

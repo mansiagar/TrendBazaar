@@ -1,17 +1,17 @@
 import { baseUrl } from "./baseUrl.js";
 
+// windows on load function
 window.onload = async function () {
   try {
     let arr = await getdata();
 
-    let select = document.getElementById("select");
     let data = []; // to hold filtered data
     // display default data
-    console.log(arr);
-    let defaultData = arr.filter((item) => item.type === "kurties");
-    console.log("default data", defaultData);
-    data = defaultData;
-    console.log(data);
+    // console.log(arr);
+    // let defaultData = arr.map((el,i) => item.type === "kurties");
+    // // console.log("default data", defaultData);
+    data = arr;
+    // console.log(data);
     displaydata(data);
 
     // eventlistener for type change
@@ -28,7 +28,6 @@ window.onload = async function () {
       }
       displaydata(data);
     });
-
     // Event listener for color change
     let filtercolor = document.getElementById("color");
     filtercolor.addEventListener("change", function () {
@@ -102,18 +101,6 @@ window.onload = async function () {
   }
 };
 
-// get data function
-async function getdata() {
-  try {
-    let res = await fetch(`${baseUrl}/indianwear`);
-
-    let dataoj = res.json();
-    // console.log(dataoj);
-    return dataoj;
-  } catch (err) {
-    console.log(err);
-  }
-}
 // display arr
 let displaydata = (arr) => {
   const productDiv = document.getElementById("products");
@@ -142,14 +129,6 @@ let displaydata = (arr) => {
     let wishCartdiv = document.createElement("div");
     wishCartdiv.setAttribute("class", "wishCartdiv");
 
-    let wishlist = document.createElement("button");
-    wishlist.setAttribute("id", "wishlist");
-    wishlist.textContent = "Add to WishList";
-    wishlist.addEventListener("click", function () {
-      console.log(" wishlist function clicked", el);
-      addProductWishlist(el);
-    });
-
     let cart = document.createElement("button");
     cart.setAttribute("id", "cart");
     cart.textContent = "Add to Cart";
@@ -158,52 +137,12 @@ let displaydata = (arr) => {
       addToCart(el);
     });
 
-    wishCartdiv.append(wishlist, cart);
+    wishCartdiv.append(cart);
     product.append(kurtieImg, title, price_stock, wishCartdiv);
     productDiv.append(product);
   });
 };
 
-let addProductWishlist = async (product) => {
-  try {
-    // Fetch the current wishlist from the server
-    let response = await fetch(`${baseUrl}/wishlist`);
-    let wishlist = await response.json();
-    console.log("wishlist", wishlist);
-
-    // Check if the product is already in the wishlist
-    let isProductInWishlist = wishlist.some(
-      (item) => item.name === product.name
-    );
-
-    if (!isProductInWishlist) {
-      // Add the product to the server-side wishlist
-      let addResponse = await fetch(`${baseUrl}/wishlist`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(product),
-      });
-
-      if (addResponse.ok) {
-        alert("Product successfully added to Wishlist");
-        confirm("Are you sure you want to add this item to the wishlist?");
-        window.location.href = "/TrendBazaar/frontend/wishlist.html";
-        // window.location.href = "/frontend/wishlist.html";
-      } else {
-        alert("Failed to add product to Wishlist. Please try again.");
-      }
-    } else {
-      alert("This product is already in your wishlist.");
-    }
-  } catch (error) {
-    console.error("Error adding product to wishlist:", error);
-    alert("Something went wrong. Please try again later.");
-  }
-};
-
-// add to cart function
 //add to cart function
 let addToCart = async (product) => {
   try {
@@ -229,9 +168,24 @@ let addToCart = async (product) => {
       }
     } else {
       alert("This product is already in your cart.");
+      window.location.href = "/TrendBazaar/frontend/cart.html"; // Redirect to cart page
+      //window.location.href = "/frontend/cart.html";
     }
   } catch (error) {
     console.log("Error adding product to cart:", error);
     alert("Something went wrong. Please try again later.");
   }
 };
+
+// get data function
+async function getdata() {
+  try {
+    let res = await fetch(`${baseUrl}/wishlist`);
+
+    let dataoj = res.json();
+    // console.log(dataoj);
+    return dataoj;
+  } catch (err) {
+    console.log(err);
+  }
+}
