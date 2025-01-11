@@ -28,17 +28,33 @@ form.addEventListener("submit", async (event) => {
     inStock,
     image,
   };
-  fetch(`${baseUrl}/indianwear`, {
-    method: "POST",
-    headers: {
-      "content-type": "application/json",
-    },
-    body: JSON.stringify(newProduct),
-  })
-    .then(() => {
-      alert("successfully user added");
+  if (category === "indianwear") {
+    fetch(`${baseUrl}/indianwear`, {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(newProduct),
     })
-    .catch((err) => {
-      alert("something went wrong");
-    });
+      .then(() => {
+        alert("successfully user added");
+      })
+      .catch((err) => {
+        alert("something went wrong");
+      });
+  } else {
+    fetch(`${baseUrl}/westrnwear`, {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(newProduct),
+    })
+      .then(() => {
+        alert("successfully user added");
+      })
+      .catch((err) => {
+        alert("something went wrong");
+      });
+  }
 });

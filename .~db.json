@@ -67,7 +67,24 @@
       "image": "https://raw.githubusercontent.com/mansiagar/TrendBazaar/main/images/saree2.jpg"
     }
   ],
-  "wishlist": [],
+  "wishlist": [
+    {
+      "type": "tops",
+      "id": 1736581661648,
+      "name": "Blue Self Design Rayon Straight Tunic",
+      "price": 671,
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "color": "blue",
+      "material": "Rayon",
+      "inStock": true,
+      "image": "https://raw.githubusercontent.com/mansiagar/TrendBazaar/main/images/saree3.jpg"
+    }
+  ],
   "cart": [
     {
       "type": "kurties",
@@ -99,6 +116,108 @@
       "material": "crepe",
       "inStock": true,
       "image": "https://raw.githubusercontent.com/mansiagar/TrendBazaar/main/images/kurti2.jpg"
+    },
+    {
+      "type": "tops",
+      "id": 1736581661648,
+      "name": "Blue Self Design Rayon Straight Tunic",
+      "price": 671,
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "color": "blue",
+      "material": "Rayon",
+      "inStock": true,
+      "image": "https://raw.githubusercontent.com/mansiagar/TrendBazaar/main/images/saree3.jpg"
+    },
+    {
+      "type": "tops",
+      "id": 1736581716638,
+      "name": "Mustard Self Design Rayon Straight Tunic",
+      "price": 519,
+      "size": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "color": "yellow",
+      "material": "Rayon",
+      "inStock": true,
+      "image": "https://raw.githubusercontent.com/mansiagar/TrendBazaar/main/images/saree3.jpg"
+    }
+  ],
+  "westrnwear": [
+    {
+      "type": "tops",
+      "id": 1736581661648,
+      "name": "Blue Self Design Rayon Straight Tunic",
+      "price": 671,
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "color": "blue",
+      "material": "Rayon",
+      "inStock": true,
+      "image": "https://raw.githubusercontent.com/mansiagar/TrendBazaar/main/images/saree3.jpg"
+    },
+    {
+      "type": "tops",
+      "id": 1736581716638,
+      "name": "Mustard Self Design Rayon Straight Tunic",
+      "price": 519,
+      "size": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "color": "yellow",
+      "material": "Rayon",
+      "inStock": true,
+      "image": "https://raw.githubusercontent.com/mansiagar/TrendBazaar/main/images/saree3.jpg"
+    },
+    {
+      "type": "tops",
+      "id": 1736581755636,
+      "name": "Orange Solid Rayon Straight Tunic",
+      "price": 519,
+      "size": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "color": "orange",
+      "material": "Rayon",
+      "inStock": true,
+      "image": "https://raw.githubusercontent.com/mansiagar/TrendBazaar/main/images/saree3.jpg"
+    },
+    {
+      "type": "tops",
+      "id": 1736581779971,
+      "name": "Pink Solid Rayon Straight Tunic",
+      "price": 617,
+      "size": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "color": "Pink",
+      "material": "Rayon",
+      "inStock": true,
+      "image": "https://raw.githubusercontent.com/mansiagar/TrendBazaar/main/images/saree3.jpg"
     }
   ]
 }

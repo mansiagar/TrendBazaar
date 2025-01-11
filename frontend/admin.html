@@ -33,7 +33,7 @@
         <select id="category" name="category" required>
           <option value="" disabled selected>Select Category</option>
           <option value="indianwear">Indian Wear</option>
-          <!-- <option value="westernwear">Western Wear</option> -->
+          <option value="westernwear">Western Wear</option>
         </select>
 
         <select id="indianwear">
@@ -42,11 +42,11 @@
           <option value="sarees">Sarees</option>
         </select>
 
-        <!-- <select id="westernwear">
+        <select id="westernwear">
           <option value="">Type</option>
           <option value="jeans">Jeans</option>
           <option value="tops">Tops</option>
-        </select> -->
+        </select>
 
         <input type="text" id="name" name="name" required placeholder="Name" />
         <input
@@ -98,6 +98,24 @@
             sizeInput.value = ""; // Clear the value when disabled
           } else {
             sizeInput.disabled = false;
+          }
+        });
+      // EventListner for westren wear choose
+      document
+        .getElementById("category")
+        .addEventListener("change", (event) => {
+          const selectedType = event.target.value;
+          const wearinput = document.getElementById("indianwear");
+          const wearinput2 = document.getElementById("westernwear");
+
+          // Disable or enable size input based on the selected type
+          if (selectedType === "indianwear") {
+            wearinput2.disabled = true;
+            wearinput2.value = ""; // Clear the value when disabled
+          } else {
+            wearinput2.disabled = false;
+            wearinput.disabled = true;
+            wearinput2.value = "";
           }
         });
     </script>

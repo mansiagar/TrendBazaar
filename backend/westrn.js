@@ -1,27 +1,26 @@
 import { baseUrl } from "./baseUrl.js";
-
 window.onload = async function () {
   try {
     let arr = await getdata();
 
-    let select = document.getElementById("select");
+    //let select = document.getElementById("select");
     let data = []; // to hold filtered data
     // display default data
 
-    let defaultData = arr.filter((item) => item.type === "kurties");
+    let defaultData = arr.filter((item) => item.type === "tops");
     console.log("default data", defaultData);
     data = defaultData;
-
+    console.log("current data", data);
     displaydata(data);
 
     // eventlistener for type change
     select.addEventListener("change", function () {
       let typeToDisplay = select.value;
 
-      if (typeToDisplay === "kurties") {
-        data = arr.filter((item) => item.type == "kurties");
-      } else if (typeToDisplay === "sarees") {
-        data = arr.filter((item) => item.type == "sarees");
+      if (typeToDisplay === "tops") {
+        data = arr.filter((item) => item.type == "tops");
+      } else if (typeToDisplay === "jeans") {
+        data = arr.filter((item) => item.type == "jeans");
       } else {
         console.error("Invalid type specified");
         return;
@@ -105,10 +104,10 @@ window.onload = async function () {
 // get data function
 async function getdata() {
   try {
-    let res = await fetch(`${baseUrl}/indianwear`);
+    let res = await fetch(`${baseUrl}/westrnwear`);
 
     let dataoj = res.json();
-    // console.log(dataoj);
+    console.log(dataoj);
     return dataoj;
   } catch (err) {
     console.log(err);
@@ -187,7 +186,6 @@ let displaydata = (arr) => {
     productDiv.append(product);
   });
 };
-
 let addProductWishlist = async (product) => {
   try {
     // Fetch the current wishlist from the server
@@ -259,7 +257,6 @@ let addToCart = async (product) => {
     alert("Something went wrong. Please try again later.");
   }
 };
-
 let form = document.getElementById("form");
 form.addEventListener("submit", function (event) {
   event.preventDefault();

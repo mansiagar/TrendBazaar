@@ -174,7 +174,7 @@ let removeProductWishlist = async (product) => {
 
     if (isProductInWishlist) {
       // Add the product to the server-side wishlist
-      let deleteResponse = await fetch(`${baseUrl}/wishlist/${product.id}`, {
+      let deleteResponse = await fetch(`${baseUrl}/cart/${product.id}`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
@@ -190,7 +190,7 @@ let removeProductWishlist = async (product) => {
         alert("Failed to delete product to Wishlist. Please try again.");
       }
     } else {
-      alert("This product is already in your wishlist.");
+      alert("This product is not deleted.");
     }
   } catch (error) {
     console.error("Error delete product from wishlist:", error);
