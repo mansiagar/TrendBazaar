@@ -18,7 +18,7 @@ indianbutton.addEventListener("click", function (event) {
 let westrnbutton = document.getElementById("westrn");
 westrnbutton.addEventListener("click", function (event) {
   event.preventDefault();
-  window.location.href = "/TrendBazaar/frontend/homepage.html";
+  window.location.href = "/TrendBazaar/frontend/westrn.html";
 
   //window.location.href = "/frontend/westrn.html";
 });
