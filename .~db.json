@@ -134,7 +134,7 @@
       "color": "yellow",
       "material": "Rayon",
       "inStock": true,
-      "image": "https://raw.githubusercontent.com/mansiagar/TrendBazaar/main/images/saree3.jpg"
+      "image": "https://raw.githubusercontent.com/mansiagar/TrendBazaar/main/images/top2.jpg"
     },
     {
       "type": "tops",
@@ -145,7 +145,7 @@
       "color": "orange",
       "material": "Rayon",
       "inStock": true,
-      "image": "https://raw.githubusercontent.com/mansiagar/TrendBazaar/main/images/saree3.jpg"
+      "image": "https://raw.githubusercontent.com/mansiagar/TrendBazaar/main/images/top4.jpg"
     },
     {
       "type": "tops",
@@ -156,7 +156,7 @@
       "color": "Pink",
       "material": "Rayon",
       "inStock": true,
-      "image": "https://raw.githubusercontent.com/mansiagar/TrendBazaar/main/images/saree3.jpg"
+      "image": "https://raw.githubusercontent.com/mansiagar/TrendBazaar/main/images/top3.jpg"
     }
   ]
 }

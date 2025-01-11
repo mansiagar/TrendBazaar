@@ -163,7 +163,7 @@ async function getdata() {
 let removeProductWishlist = async (product) => {
   try {
     // Fetch the current wishlist from the server
-    let response = await fetch(`${baseUrl}/wishlist`);
+    let response = await fetch(`${baseUrl}/cart`);
     let wishlist = await response.json();
     console.log("wishlist", wishlist);
 
