@@ -14,12 +14,7 @@
       "id": 1736004897988,
       "name": "A-line Kurta Sets",
       "price": 799,
-      "size": [
-        "S",
-        "M",
-        "L",
-        "XL"
-      ],
+      "size": ["S", "M", "L", "XL"],
       "color": "Red",
       "material": "silk",
       "inStock": true,
@@ -30,11 +25,7 @@
       "id": 1736005002102,
       "name": "Multicolored Priented Kurti",
       "price": 999,
-      "size": [
-        "M",
-        "L",
-        "XL"
-      ],
+      "size": ["M", "L", "XL"],
       "color": "blue",
       "material": "crepe",
       "inStock": true,
@@ -45,9 +36,7 @@
       "id": 1736048742996,
       "name": "Blue Printed Ploy Chiffon ",
       "price": 2999,
-      "size": [
-        ""
-      ],
+      "size": [""],
       "color": "blue",
       "material": "Chiffon",
       "inStock": true,
@@ -58,9 +47,7 @@
       "id": 1736048798018,
       "name": "Grey Printed Ploy Chiffon ",
       "price": 1499,
-      "size": [
-        ""
-      ],
+      "size": [""],
       "color": "grey",
       "material": "Chiffon",
       "inStock": false,
@@ -73,12 +60,7 @@
       "id": 1736581661648,
       "name": "Blue Self Design Rayon Straight Tunic",
       "price": 671,
-      "size": [
-        "S",
-        "M",
-        "L",
-        "XL"
-      ],
+      "size": ["S", "M", "L", "XL"],
       "color": "blue",
       "material": "Rayon",
       "inStock": true,
@@ -91,12 +73,7 @@
       "id": 1736004897988,
       "name": "A-line Kurta Sets",
       "price": 799,
-      "size": [
-        "S",
-        "M",
-        "L",
-        "XL"
-      ],
+      "size": ["S", "M", "L", "XL"],
       "color": "Red",
       "material": "silk",
       "inStock": true,
@@ -107,11 +84,7 @@
       "id": 1736005002102,
       "name": "Multicolored Priented Kurti",
       "price": 999,
-      "size": [
-        "M",
-        "L",
-        "XL"
-      ],
+      "size": ["M", "L", "XL"],
       "color": "blue",
       "material": "crepe",
       "inStock": true,
@@ -122,12 +95,7 @@
       "id": 1736581661648,
       "name": "Blue Self Design Rayon Straight Tunic",
       "price": 671,
-      "size": [
-        "S",
-        "M",
-        "L",
-        "XL"
-      ],
+      "size": ["S", "M", "L", "XL"],
       "color": "blue",
       "material": "Rayon",
       "inStock": true,
@@ -138,13 +106,7 @@
       "id": 1736581716638,
       "name": "Mustard Self Design Rayon Straight Tunic",
       "price": 519,
-      "size": [
-        "XS",
-        "S",
-        "M",
-        "L",
-        "XL"
-      ],
+      "size": ["XS", "S", "M", "L", "XL"],
       "color": "yellow",
       "material": "Rayon",
       "inStock": true,
@@ -157,29 +119,18 @@
       "id": 1736581661648,
       "name": "Blue Self Design Rayon Straight Tunic",
       "price": 671,
-      "size": [
-        "S",
-        "M",
-        "L",
-        "XL"
-      ],
+      "size": ["S", "M", "L", "XL"],
       "color": "blue",
       "material": "Rayon",
       "inStock": true,
-      "image": "https://raw.githubusercontent.com/mansiagar/TrendBazaar/main/images/saree3.jpg"
+      "image": "https://raw.githubusercontent.com/mansiagar/TrendBazaar/main/images/top1.jpg"
     },
     {
       "type": "tops",
       "id": 1736581716638,
       "name": "Mustard Self Design Rayon Straight Tunic",
       "price": 519,
-      "size": [
-        "XS",
-        "S",
-        "M",
-        "L",
-        "XL"
-      ],
+      "size": ["XS", "S", "M", "L", "XL"],
       "color": "yellow",
       "material": "Rayon",
       "inStock": true,
@@ -190,13 +141,7 @@
       "id": 1736581755636,
       "name": "Orange Solid Rayon Straight Tunic",
       "price": 519,
-      "size": [
-        "XS",
-        "S",
-        "M",
-        "L",
-        "XL"
-      ],
+      "size": ["XS", "S", "M", "L", "XL"],
       "color": "orange",
       "material": "Rayon",
       "inStock": true,
@@ -207,13 +152,7 @@
       "id": 1736581779971,
       "name": "Pink Solid Rayon Straight Tunic",
       "price": 617,
-      "size": [
-        "XS",
-        "S",
-        "M",
-        "L",
-        "XL"
-      ],
+      "size": ["XS", "S", "M", "L", "XL"],
       "color": "Pink",
       "material": "Rayon",
       "inStock": true,
